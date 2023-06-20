@@ -1,8 +1,6 @@
-import { useState } from "react";
 
-export const Counter = () => {
-  const [contador, setContador] = useState(0);
-
+const Counter = ( {contador, setContador} ) => {
+  
   return (
     <div>
       <h2>{contador}</h2>
@@ -11,3 +9,5 @@ export const Counter = () => {
     </div>
   );
 };
+
+export default Counter;
