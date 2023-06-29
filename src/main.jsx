@@ -3,3 +3,13 @@ import App from "./App.jsx";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+
+import React from 'react'
+
+const main = () => {
+  return (
+    <div>main</div>
+  )
+}
+
+export default main
