@@ -4,8 +4,13 @@ import styles from "./Navbar.module.css";
 
 import { Link } from "react-router-dom";
 import { menuNavigate } from "../../../routes/menuNavigate";
+import { CartContext } from "../../../context/CartContext";
+import { useContext } from "react";
 
 const Navbar = () => {
+  const { getTotalItems } = useContext(CartContext);
+  let totalItems = getTotalItems();
+
   return (
     <>
       <div className={styles.containerNavbar}>
@@ -24,7 +29,7 @@ const Navbar = () => {
         </ul>
 
         <Link to="/carrito">
-          <Badge badgeContent={4} color="primary">
+          <Badge badgeContent={totalItems} showZero color="primary">
             <BsFillCartCheckFill size="30px" />
           </Badge>
         </Link>
